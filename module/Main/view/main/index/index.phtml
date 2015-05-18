@@ -1,0 +1,40 @@
+<strong>Module:</strong>        Main &raquo;
+<strong>Controller:</strong>    Index &raquo;
+<strong>Action:</strong>        index
+<?php 
+$title = 'Add new album';
+$this->headTitle($title);
+?>
+<h1><?php echo $this->escapeHtml($title); ?></h1>
+<?php
+
+$mainform->setAttribute('method', 'post');
+$mainform->setAttribute('action', $this->url(Null, array('controller'=>'index', 'action' => 'confirm')));
+
+$mainform->prepare();
+
+ echo $this->form()->openTag($mainform);
+ ?>
+<dl class="zend_form">
+<dt><?php echo $this->formLabel($mainform->get('C0002_Sh_Ghabz')); ?></dt>
+<dd><?php 
+    echo $this->formElement($mainform->get('C0002_Sh_Ghabz'));
+    echo $this->formElementErrors($mainform->get('C0002_Sh_Ghabz'));
+    
+?></dd>
+<dt><?php echo $this->formLabel($mainform->get('C0003_Section')); ?></dt>
+<dd><?php 
+    echo $this->formElement($mainform->get('C0003_Section'));
+    echo $this->formElementErrors($mainform->get('C0003_Section'));
+ ?></dd>
+ <dt><?php echo "</br>"; ?></dt>
+<dd><?php 
+		$mainform->get('submit')->setValue('اضافه شود');    
+		echo $this->formElement($mainform->get('submit'));
+   		echo $this->formElementErrors($mainform->get('submit'));
+   
+?></dd>
+</dl>
+<?php 
+ echo $this->form()->closeTag();
+?>

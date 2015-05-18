@@ -12,5 +12,34 @@
  */
 
 return array(
-    // ...
+     'navigation' => array(
+        'default' => array(
+            array(
+                'label' => 'Home',
+                'route' => 'home',
+            ),
+            array(
+                'label' => 'User',
+                'route' => 'user',
+                'pages' => array(
+                    array(
+                        'label' => 'List',
+                        'route' => 'list',
+                    ),
+                    array(
+                        'label' => 'Add',
+                        'route' => 'add',
+                    ),
+                    array(
+                        'label' => 'Edit',
+                        'route' => 'edit',
+                    ),
+                ),
+            ),
+            array(
+                'label' => 'Options',
+                'route' => 'options',
+            ),
+        )
+    )
 );
