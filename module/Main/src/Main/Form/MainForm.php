@@ -18,6 +18,28 @@ class MainForm extends Form
         		),
         ));
         ///////////////////
+		    $this->add(array(
+		    		'name' => 'Havij',
+		    		'type'  => 'Zend\Form\Element\Select',
+		    		'attributes' => array(
+		    				'type'  => 'Zend\Form\Element\Select',
+		    		),
+		    		
+		    		'options' => array(
+		    				 'label' => 'Which is your mother tongue?',
+		    				'empty_option' => 'Please choose your language',
+		    				'label_attributes' => array( 'placement' => 'APPEND'),
+		    				'value_options' =>array(
+		    				'0' => 'سلام',
+		    				'1' => 'خداحافظ',
+		    				'2' => 'Japanese',
+		    				'3' => 'Chinese',
+		    				),
+		    				
+		    				
+		    		),
+		    ));
+        ///////////////////
         $this->add(array(
         		'name' => 'C0003_Section',
         		'attributes' => array(

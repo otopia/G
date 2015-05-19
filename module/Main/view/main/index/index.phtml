@@ -22,6 +22,12 @@ $mainform->prepare();
     echo $this->formElementErrors($mainform->get('C0002_Sh_Ghabz'));
     
 ?></dd>
+<dt><?php echo $this->formLabel($mainform->get('Havij')); ?></dt>
+<dd><?php 
+    echo $this->formselect($mainform->get('Havij'));
+    //echo $this->formformElementErrors($mainform->get('Havij'));
+    
+?></dd>
 <dt><?php echo $this->formLabel($mainform->get('C0003_Section')); ?></dt>
 <dd><?php 
     echo $this->formElement($mainform->get('C0003_Section'));
